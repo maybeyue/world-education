@@ -1,0 +1,27 @@
+version: 2
+
+macros:
+  - name: pivot_by_topic
+    description: A macro to generate a pivoted table with columns filtered from general topic of the indicators
+    arguments:
+      - name: topic_name
+        type: string
+        description: The category of indicator, must be one of the values from the topic column of series_summary
+  - name: filter_topic
+    description: A macro that provides a full boolean statement on the given topic name
+    arguments:
+      - name: topic_name
+        type: string
+        description: The category of indicator, must be one of the values from the topic column of series_summary
+  - name: pivot_by_indicators
+    description: A macro to generate a pivoted table from a list of indicators in order to transform into columns
+    arguments:
+      - name: indicators
+        type: list
+        description: list of indicator codes, should be in the original format from the staging tables
+  - name: filter_for_indicators
+    description: A macro that provides a full where statement given a list of indicators to exact match with
+    arguments:
+        - name: indicators
+          type: list
+          description: list of indicator codes, should be in the original format from the staging tables
