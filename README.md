@@ -5,7 +5,7 @@
 This public dataset combines key education statistics from a variety of sources to provide a look at global literacy, spending, and access.
 It is publicly accessible in BigQuery.
 
-This dataset includes thousands of indicators. We will specifically examine early childhood education, literacy, and education.
+This dataset includes thousands of indicators. We will specifically examine early childhood education, literacy, and education. Note that this is still a WIP and will be updated with a dashboard.
 
 ### Available tables
 
