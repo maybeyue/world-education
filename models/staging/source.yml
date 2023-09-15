@@ -1,0 +1,27 @@
+version: 2
+
+sources:
+  - name: world_bank_intl_education
+    database: bigquery-public-data
+    schema: world_bank_intl_education
+    tables:
+      - name: international_education
+        columns:
+          - name: country_code
+            tests:
+              - not_null
+          - name: year
+            tests:
+              - not_null
+      - name: series_summary
+        columns:
+          - name: series_code
+            tests:
+              - unique
+              - not_null
+      - name: country_summary
+        columns:
+          - name: country_code
+            tests:
+              - unique
+              - not_null
